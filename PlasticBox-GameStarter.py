@@ -1,5 +1,8 @@
+# PlasticBox Game Starter by Alex Martin
+# Error codes:
+# None.
+
 import logging
-import sys
 import PlasticBox
 
 debugStatus = True
