@@ -7,6 +7,8 @@ class ZoneRCI(Zone):
   density = 0
   flagWantsToIncreaseDensity = False;
   
+  # Private
+  
   def __refreshFlags(self):
     if all( self.age > 8, self.happyTime > 2, self.density < 10 ):
       self.flagWantsToIncreaseDensity = True

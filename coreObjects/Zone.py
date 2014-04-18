@@ -13,8 +13,12 @@ class Zone(object):
   flagNeedsPower = False;
   flagNeedsWater = False;
   
+  # Init method
+  
   def __init__(self):
     self.spaceAvailable = random.randint(500, 1000);
+  
+  # Private
   
   def __refreshFlags(self):
     if self.powerNeed > self.power:
@@ -34,7 +38,9 @@ class Zone(object):
     self.age = self.age + 1
     self.power = 0
     self.water = 0
-
+  
+  # Public
+  
   def newTurn(self):
     """Get this zone ready for the next turn."""
     self.__refreshTurnStats()
