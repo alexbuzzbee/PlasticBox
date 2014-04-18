@@ -1,4 +1,5 @@
 import ZoneRCI
+import AgentWorkers
 
 class Residential(ZoneRCI):
   """A residential zone, which contains people, and can send them."""
