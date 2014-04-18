@@ -1,6 +1,6 @@
 import Agent
 
-class AgentWorkers(Agent):
+class AgentWorker(Agent):
   agentType = "workers"
   workers = 0
   
