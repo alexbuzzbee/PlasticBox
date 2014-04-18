@@ -1,7 +1,7 @@
 import Agent
 
 class AgentWorker(Agent):
-  agentType = "workers"
+  agentType = "worker"
   workers = 0
   
   def __init__(self, numWorkers):
