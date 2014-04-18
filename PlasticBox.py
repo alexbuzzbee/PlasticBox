@@ -47,8 +47,7 @@ def setupEngineLogger(debugState):
 
 def loadMod(modDir, modName):
   modContainer = imp.find_module(modName, modDir)
-  mod = imp.load_module("mod_" + modName, modContainer)
-  mod.init()
+  imp.load_module("mod_" + modName, modContainer)
 
 def setupEngine():
   setupEngineLogger(debugStatus)
