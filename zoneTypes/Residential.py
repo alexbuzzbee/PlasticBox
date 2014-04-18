@@ -28,4 +28,4 @@ class Residential(ZoneRCI):
       else:
         self.__makeWorkers(self.population - self.populationElsewhere)
         self.populationElsewhere = self.population
-    
+  

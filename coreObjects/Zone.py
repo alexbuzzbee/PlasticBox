@@ -2,21 +2,22 @@ import random
 
 class Zone(object):
   """The base class for simulation zones, which power the economy and provide resources."""
-  age = 0;
-  agents = [ None ]; # The agents in this zone.
-  powerNeed = 0;
-  power = 0;
-  waterNeed = 0;
-  water = 0;
-  spaceAvailable = 0;
-  spaceUsed = 0;
-  flagNeedsPower = False;
-  flagNeedsWater = False;
+  zoneType = None
+  age = 0
+  agents = [ None ] # The agents in this zone.
+  powerNeed = 0
+  power = 0
+  waterNeed = 0
+  water = 0
+  spaceAvailable = 0
+  spaceUsed = 0
+  flagNeedsPower = False
+  flagNeedsWater = False
   
   # Init method
   
   def __init__(self):
-    self.spaceAvailable = random.randint(500, 1000);
+    self.spaceAvailable = random.randint(500, 1000)
   
   # Private
   

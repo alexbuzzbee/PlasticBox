@@ -11,6 +11,12 @@ import time
 debugStatus = True
 
 # Functions:
+
+def moveAgent(oldPos, newPos, agentNumber):
+  agentToMove = zones[newPos].pop(agentNumber)
+  agentToMove.location = len(zones) + 1
+  zones.append(agentToMove)
+
 def main():
   engineLogger.info("Detected that the engine has been started as an application.")
   engineLogger.critical("The PlasticBox engine should not be started as an application. Stopping.")
@@ -41,7 +47,8 @@ def setupEngineLogger(debugState):
 
 def loadMod(modDir, modName):
   modContainer = imp.find_module(modName, modDir)
-  imp.load_module("mod_" + modName, modContainer)
+  mod = imp.load_module("mod_" + modName, modContainer)
+  mod.init()
 
 def setupEngine():
   setupEngineLogger(debugStatus)
